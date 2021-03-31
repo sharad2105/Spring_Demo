@@ -8,14 +8,14 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
         <bean class="org.example.Student" name="student1">
-            <property name="studentId">
-                <value>101</value>
-            </property>
-            <property name="studentName">
-                <value>Sharad</value>
-            </property>
-            <property name="studentAddress">
-                <value>Dhule</value>
-            </property>
+            <property name="studentId" value="101" />
+
+            <property name="studentName" value="Sharad"/>
+
+            <property name="studentAddress" value="Dhule" />
         </bean>
+        
+        
+        <bean class="org.example.Student" name="student2" p:studentId="151" p:studentName="Hitendra" p:studentAddress="Mumbai" />
+           
 </beans>
