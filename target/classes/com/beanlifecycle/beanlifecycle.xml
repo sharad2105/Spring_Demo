@@ -13,4 +13,8 @@
        		
        		<property name="price" value="112.60" />
        </bean>
+       
+       <bean class="com.beanlifecycle.Food" name="f1">
+       		<property name="price" value="40.33" />
+       </bean>
 </beans>
