@@ -8,9 +8,19 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
         
+        <context:annotation-config />
+        
         <bean class="com.beanlifecycle.Clothes" name="clt" 
         		init-method="init" destroy-method="destroy">
        		
        		<property name="price" value="112.60" />
+       </bean>
+       
+       <bean class="com.beanlifecycle.Food" name="food">
+       		<property name="price" value="55" />
+       </bean>
+       
+       <bean class="com.beanlifecycle.Example" name="example">
+       		<property name="subject" value="Datastructure" />
        </bean>
 </beans>

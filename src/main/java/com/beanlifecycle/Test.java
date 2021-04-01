@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Test {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		AbstractApplicationContext context =new ClassPathXmlApplicationContext("beanlifecycle.xml");
 		
@@ -13,11 +14,14 @@ public class Test {
 		 Clothes clothes = (Clothes) context.getBean("clt");
 		 System.out.println(clothes);
 		
-		 System.out.println("+++++++for the Interface++++++++++++");
-		 Food f1 = (Food) context.getBean("f1");
-		 System.out.println(f1);
-		 context.registerShutdownHook();
+		 System.out.println("*************for Interface*************");
+		 Food food = (Food) context.getBean("food");
+		 System.out.println(food);
 
+		 System.out.println("************Annotation****************");
+		 Example example = (Example) context.getBean("example");
+		 System.out.println(example);
+		 
 	}
 
 }
